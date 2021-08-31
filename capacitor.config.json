@@ -1,0 +1,6 @@
+{
+  "appId": "com.calculator.app",
+  "appName": "calculator",
+  "webDir": "web_assets",
+  "bundledWebRuntime": false
+}
