@@ -2,10 +2,11 @@ import React from 'react';
 
 class Screen extends React.Component {
     render() {
+        let { display } = this.props;
         return (
             <div className="screen">
                 <h2></h2>
-                <input type="text" value={this.props.screenValue} onChange={this.props.handleScreenChange} />
+                <h1>{display}</h1>
             </div>
         )
     }

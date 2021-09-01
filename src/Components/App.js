@@ -7,17 +7,22 @@ import Dropdown from './Dropdown';
 class App extends React.Component {
     state = {
         isDropdownOpen: false,
-        screenValue: '0',
+        display: 0,
         firstOperand: null,
         secondOperand: null,
         operator: null,
         history: {}
     }
-    handleCalcBtnClick = (e) =>{
-        this.setState({screenValue: e.target.value})
+
+    calculate = () => {
+        this.setState({ display: '' })
     }
-    handleScreenChange = (e) => {
-        this.setState({screenValue: e.target.value})
+
+    handleClick = () => {
+
+    }
+    allClear = () => {
+        this.setState({ screenvalue: 0 })
     }
     handleDropdownClick = () => {
         this.setState({ isDropdownOpen: true })
@@ -28,18 +33,16 @@ class App extends React.Component {
                 <header>
                     <div className="notch" />
                     <DropdownBtn
-                        handleDropdownClick={this.handleDropdownClick} 
+                        handleDropdownClick={this.handleDropdownClick}
                         isDropdownOpen={this.state.isDropdownOpen} />
                 </header>
                 <Dropdown
-                    handleDropdownClick={this.handleDropdownClick} 
+                    handleDropdownClick={this.handleDropdownClick}
                     isDropdownOpen={this.state.isDropdownOpen} />
                 <Screen
-                    screenValue={this.state.screenValue}
-                    handleScreenChange={this.handleScreenChange} />
+                    display={this.state.display} />
                 <Keypad
-                    screenValue={this.state.screenValue}
-                    handleCalcBtnClick={this.handleCalcBtnClick} />
+                    handleClick={this.handleClick} />
                 <div className="home" />
             </div>
         )
