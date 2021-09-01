@@ -6,6 +6,8 @@ html, body {
 
 #root {
     height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .container {
@@ -13,10 +15,12 @@ html, body {
     margin: auto;
     background-color: rgb(75, 55, 120);
     border-radius: 39px;
+    position: relative;
 }
 
 header {
     width: 100%;
+    position: relative;
     background-color: rgb(115, 85, 160);
     height: 6rem;
     display: flex;
@@ -37,6 +41,7 @@ header {
     right: 0;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    z-index: 10;
 }
 
 .dropdown-btn {
@@ -68,9 +73,17 @@ header {
     margin: auto;
 }
 
-.screen h1 {
+.screen input {
     color: white;
     font-size: 3rem;
+    width: 100%;
+    background-color: rgb(75, 55, 120);
+    border: none;
+    text-align: end;
+}
+
+.screen h2 {
+    color: white;
 }
 
 .keypad {
@@ -199,6 +212,17 @@ header {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -15px;
+    bottom: 10px;
     border-radius: 10px;
+}
+
+.dropdown {
+    position: absolute;
+    height: 48%;
+    top: 0;
+    width: 100%;
+    border-top-left-radius: 39px;
+    border-top-right-radius: 39px;
+    z-index: 5;
+    background-color: rgb(115, 85, 160);
 }

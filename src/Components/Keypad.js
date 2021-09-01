@@ -4,23 +4,23 @@ class Keypad extends React.Component {
     render() {
         return (
             <div className="keypad">
-                <button className="btn clear">C</button>
-                <button className="btn operand divider">÷</button>
-                <button className="btn operand multiply">x</button>
-                <button className="btn numbtn seven">7</button>
-                <button className="btn numbtn eight">8</button>
-                <button className="btn numbtn nine">9</button>
-                <button className="btn operand minus">-</button>
-                <button className="btn numbtn four">4</button>
-                <button className="btn numbtn five">5</button>
-                <button className="btn numbtn six">6</button>
-                <button className="btn operand plus">+</button>
-                <button className="btn numbtn one">1</button>
-                <button className="btn numbtn two">2</button>
-                <button className="btn numbtn three">3</button>
-                <button className="btn numbtn zero">0</button>
-                <button className="btn numbtn decimal">.</button>
-                <button className="btn operand equals">=</button>
+                <button onClick={this.props.handleCalcBtnClick} value="C" className="btn clear">C</button>
+                <button onClick={this.props.handleCalcBtnClick} value="÷" className="btn operand divider">÷</button>
+                <button onClick={this.props.handleCalcBtnClick} value="x" className="btn operand multiply">x</button>
+                <button onClick={this.props.handleCalcBtnClick} value="7" className="btn number seven">7</button>
+                <button onClick={this.props.handleCalcBtnClick} value="8" className="btn number eight">8</button>
+                <button onClick={this.props.handleCalcBtnClick} value="9" className="btn number nine">9</button>
+                <button onClick={this.props.handleCalcBtnClick} value="-" className="btn operand minus">-</button>
+                <button onClick={this.props.handleCalcBtnClick} value="4" className="btn number four">4</button>
+                <button onClick={this.props.handleCalcBtnClick} value="5" className="btn number five">5</button>
+                <button onClick={this.props.handleCalcBtnClick} value="6" className="btn number six">6</button>
+                <button onClick={this.props.handleCalcBtnClick} value="+" className="btn operand plus">+</button>
+                <button onClick={this.props.handleCalcBtnClick} value="1" className="btn number one">1</button>
+                <button onClick={this.props.handleCalcBtnClick} value="2" className="btn number two">2</button>
+                <button onClick={this.props.handleCalcBtnClick} value="3" className="btn number three">3</button>
+                <button onClick={this.props.handleCalcBtnClick} value="0" className="btn number zero">0</button>
+                <button onClick={this.props.handleCalcBtnClick} value="." className="btn number decimal">.</button>
+                <button onClick={this.props.handleCalcBtnClick} value="=" className="btn operand equals">=</button>
             </div>
         )
     }
