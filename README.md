@@ -1,5 +1,5 @@
 # Calculator
-A simple calculator app built with React.js that does simple calculations and a couple conversions.
+A calculator app built with React.js that does simple calculations and a couple conversions.
 
 ## Installation
 You will need to install a recent version of Node.js on your machine to run the app.
