@@ -7,25 +7,40 @@ import Dropdown from './Dropdown';
 class App extends React.Component {
     state = {
         isDropdownOpen: false,
-        display: 0,
-        firstOperand: null,
-        secondOperand: null,
-        operator: null,
+        display: "0",
         history: {}
     }
 
     calculate = () => {
-        this.setState({ display: '' })
+        this.setState({ display: eval(this.state.display) })
     }
-
-    handleClick = () => {
-
+    clear = () => {
+        this.setState({ display: '0' })
     }
-    allClear = () => {
-        this.setState({ screenvalue: 0 })
+    fahrToCelcius = () => {
+        this.setState({ display: (this.state.display - 32) * 5/9})
+        this.closeDropdown();
+    }
+    convertFeet = () => {
+        this.setState({ display: this.state.display * 12})
+        this.closeDropdown();
+    }
+    handleClick = (button) => {
+        if (button === 'C') {
+            this.clear();
+        } else if (button === '=') {
+            this.calculate();
+        } else if(this.state.display === '0') {
+            this.setState({ display: button});
+        } else if (this.state.display.length < 9){
+            this.setState({ display: this.state.display + button});
+        }
     }
     handleDropdownClick = () => {
         this.setState({ isDropdownOpen: true })
+    }
+    closeDropdown = () => {
+        this.setState({ isDropdownOpen: false })
     }
     render() {
         return (
@@ -37,7 +52,9 @@ class App extends React.Component {
                         isDropdownOpen={this.state.isDropdownOpen} />
                 </header>
                 <Dropdown
-                    handleDropdownClick={this.handleDropdownClick}
+                    convertFeet={this.convertFeet}
+                    fahrToCelcius={this.fahrToCelcius}
+                    closeDropdown={this.closeDropdown}
                     isDropdownOpen={this.state.isDropdownOpen} />
                 <Screen
                     display={this.state.display} />

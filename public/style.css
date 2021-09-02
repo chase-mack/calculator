@@ -68,6 +68,7 @@ header {
     width: 75%;
     border-bottom: 2px solid white;
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
     margin: auto;
@@ -80,10 +81,9 @@ header {
     background-color: rgb(75, 55, 120);
     border: none;
     text-align: end;
-}
-
-.screen h2 {
-    color: white;
+    margin: 0 auto;
+    align-self: flex-end;
+    
 }
 
 .keypad {
@@ -99,7 +99,7 @@ header {
     padding-bottom: 1.5rem;
 }
 
-.keypad .btn {
+.btn {
     border-radius: 39px;
     border: 2px solid white;
     background-color: rgb(75, 55, 120);
@@ -225,4 +225,40 @@ header {
     border-top-right-radius: 39px;
     z-index: 5;
     background-color: rgb(115, 85, 160);
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    grid-template-columns: 60px 60px;
+}
+
+#close-dropdown {
+    height: 2rem;
+    width: 4rem;
+    background-color: rgb(115, 85, 160);
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#close-dropdown span {
+    height: 3px;
+    width: 40px;
+    background-color: white;
+    border-radius: 10px;
+    display: inline-block;
+    margin: auto;
+}
+
+.dropbtn {
+    font-size: .9rem;
+    height: 3.25rem;
+    width: 3.25rem;
+    margin-bottom: 10px;
 }
