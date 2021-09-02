@@ -2,7 +2,8 @@ import React from 'react';
 
 class Screen extends React.Component {
     render() {
-        let {display} = this.props
+        // Sets the h1 to the display state.
+        let { display } = this.props
         return (
             <div className="screen">
                 <h1>{display}</h1>

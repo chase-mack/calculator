@@ -4,6 +4,7 @@ class Keypad extends React.Component {
     render() {
         return (
             <div className="keypad">
+                {/* Each button has a name value that gets saved to state onclick. */}
                 <button onClick={e => this.props.handleClick(e.target.name)} name="C" className="btn clear">C</button>
                 <button onClick={e => this.props.handleClick(e.target.name)} name="/" className="btn operand divider">÷</button>
                 <button onClick={e => this.props.handleClick(e.target.name)} name="*" className="btn operand multiply">x</button>
